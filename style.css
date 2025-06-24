@@ -1,0 +1,289 @@
+/* =================================================== */
+/* HORIZONTE CÓSMICO - FOLHA DE ESTILO PRINCIPAL    */
+/* VERSÃO COM MENU MOBILE           */
+/* =================================================== */
+
+/* --- Configurações Gerais e Fontes --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a23;
+    color: #e0e0e0;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* --- Cabeçalho (Header) --- */
+header {
+    background: rgba(15, 15, 26, 0.85);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 4px solid #ff8c00;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem; /* Ajustado para melhor visualização */
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* --- Barra de Navegação (Nav) --- */
+nav {
+    background: #1a1a36;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+}
+
+.nav-logo {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 8px;
+}
+
+nav ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    opacity: 0.8; /* Opacidade padrão */
+    transition: all 0.3s ease; /* Transição para TODAS as propriedades */
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    background-color: #ff8c00;
+    color: #0a0a23;
+    opacity: 1; /* Opacidade total no hover/focus */
+    transform: translateY(-2px); /* Efeito de elevação sutil */
+}
+
+/* --- Estilos do Menu Mobile (SEM JS) --- */
+.nav-toggle-input {
+    display: none; /* Esconde o checkbox real */
+}
+
+.nav-toggle {
+    display: none; /* Esconde a label (botão) em telas grandes */
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001; /* Garante que fique acima dos links */
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    bottom: -8px;
+}
+
+
+/* --- Conteúdo Principal (Main) --- */
+main {
+    padding: 25px;
+    max-width: 1100px;
+    margin: 30px auto;
+    background-color: rgba(28, 28, 60, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+section {
+    margin-bottom: 50px;
+    padding: 25px;
+    border-bottom: 1px dashed #44475a;
+}
+section:last-child { border-bottom: none; }
+
+section h2 {
+    color: #ffaf40;
+    font-size: 2.2rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #555a75;
+    padding-bottom: 12px;
+    font-weight: 600;
+}
+
+article {
+    background-color: rgba(42, 42, 74, 0.9);
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border-left: 6px solid #ff8c00;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+article h3 {
+    color: #ffd700;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.planet-image {
+    max-width: 180px;
+    height: auto;
+    float: right;
+    margin: 5px 0 10px 20px;
+    border-radius: 50%;
+    border: 3px solid #ff8c00;
+    background-color: #000;
+    box-shadow: 0 0 20px 5px rgba(173, 216, 230, 0.4);
+}
+
+p { margin-bottom: 12px; text-align: justify; }
+p strong { color: #90ee90; font-weight: 600; }
+em { color: #aaa; font-style: italic; display: block; margin-top: 10px; }
+
+
+/* --- Rodapé (Footer) --- */
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #b0b0b0;
+    margin-top: 40px;
+    border-top: 4px solid #ff8c00;
+    background: rgba(15, 15, 26, 0.85);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+footer p { margin: 8px 0; text-align: center; font-size: 0.9rem; }
+
+
+/* =================================================== */
+/* RESPONSIVIDADE E MENU MOBILE            */
+/* =================================================== */
+
+@media (max-width: 850px) {
+    .nav-toggle {
+        display: block; /* Mostra o botão hambúrguer (label) */
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #1a1a36;
+        flex-direction: column;
+        padding-bottom: 1rem;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+    /* A mágica acontece aqui: quando o checkbox está marcado, mostra o menu */
+    .nav-toggle-input:checked ~ .nav-links {
+        display: flex;
+    }
+
+    /* Animação do botão hambúrguer para um "X" quando o checkbox está marcado */
+    .nav-toggle-input:checked ~ .nav-toggle .hamburger {
+        background-color: transparent;
+    }
+    .nav-toggle-input:checked ~ .nav-toggle .hamburger::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    .nav-toggle-input:checked ~ .nav-toggle .hamburger::after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+
+    header h1 { font-size: 2.2rem; }
+    .planet-image { float: none; display: block; margin: 15px auto 20px auto; max-width: 150px; }
+    main { padding: 15px; margin: 20px 10px; }
+    section h2 { font-size: 1.9rem; }
+    article h3 { font-size: 1.6rem; }
+}
+
+@media (max-width: 480px) {
+    header h1 { font-size: 1.8rem; }
+    section h2 { font-size: 1.6rem; }
+    article h3 { font-size: 1.4rem; }
+}
+
+.video-wrapper, .sketchfab-embed-wrapper, .video-link-wrapper, .form-contato { margin: 20px 0; }
+.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 8px; }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.sketchfab-embed-wrapper iframe { width: 100%; height: 450px; border-radius: 8px; border: 1px solid #4a4e69; }
+.video-link-wrapper { background-color: #1e1e3f; border: 1px solid #4a4e69; border-radius: 8px; padding: 20px; text-align: center; }
+.video-button { display: inline-block; background-color: #fca311; color: #1a1a2e; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-family: 'Orbitron', sans-serif; font-weight: bold; margin-top: 10px; transition: background-color 0.3s, transform 0.2s; }
+.video-button:hover { background-color: #ffc300; transform: scale(1.05); }
+.form-contato { background-color: rgba(42, 42, 74, 0.9); padding: 25px; border-radius: 8px; border-left: 6px solid #ff8c00; }
+.form-contato div { margin-bottom: 15px; }
+.form-contato label { display: block; margin-bottom: 5px; color: #ffd700; font-weight: 500; }
+.form-contato input[type="text"], .form-contato input[type="email"], .form-contato textarea { width: 100%; padding: 10px; border: 1px solid #555a75; border-radius: 5px; background-color: #1c1c3c; color: #e0e0e0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1rem; box-sizing: border-box; }
+.form-contato input[type="text"]:focus, .form-contato input[type="email"]:focus, .form-contato textarea:focus { outline: none; border-color: #ff8c00; box-shadow: 0 0 5px rgba(255, 140, 0, 0.5); }
+.form-contato textarea { resize: vertical; min-height: 100px; }
+.form-contato input[type="submit"] { background-color: #ff8c00; color: #0a0a23; padding: 12px 20px; border: none; border-radius: 5px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s ease; }
+.form-contato input[type="submit"]:hover { background-color: #ffaf40; transform: translateY(-2px); }
+.aviso-form { margin-top: 20px; padding: 10px; background-color: rgba(255, 255, 0, 0.1); border: 1px dashed #ffd700; border-radius: 5px; color: #f0f0f0; text-align: center; }
+.aviso-form strong { color: #ff8c00; }

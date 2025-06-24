@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planetas Anões - Sistema Solar</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>🌌 Nosso Incrível Sistema Solar 🪐</h1>
+    </header>
+
+    <nav>
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">Horizonte Cósmico</a>
+        
+        <!-- O checkbox que controla o menu (fica invisível) -->
+        <input type="checkbox" id="nav-toggle-input" class="nav-toggle-input">
+        
+        <!-- A label que funciona como o botão hambúrguer -->
+        <label for="nav-toggle-input" class="nav-toggle">
+            <span class="hamburger"></span>
+        </label>
+        
+        <!-- A lista de links que será mostrada/escondida -->
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="sol.html">Sol</a></li>
+                <li><a href="mercurio.html">Mercúrio</a></li>
+                <li><a href="venus.html">Vênus</a></li>
+                <li><a href="terra.html">Terra</a></li>
+                <li><a href="marte.html">Marte</a></li>
+                <li><a href="cinturao_asteroides.html">Cinturão de Asteroides</a></li>
+                <li><a href="jupiter.html">Júpiter</a></li>
+                <li><a href="saturno.html">Saturno</a></li>
+                <li><a href="urano.html">Urano</a></li>
+                <li><a href="netuno.html">Netuno</a></li>
+                <li><a href="planetas_anoes.html">Planetas Anões</a></li>
+                <li><a href="outros_corpos_celestes.html">Outros Corpos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main>
+        <section id="planetas-anoes-info">
+            <h2>🪐 Planetas Anões</h2>
+            <p>Em 2006, a União Astronômica Internacional (UAI) estabeleceu uma nova categoria de corpos celestes: os planetas anões. Um planeta anão é um corpo celeste que:</p>
+            <ol>
+                <li>Orbita o Sol.</li>
+                <li>Tem massa suficiente para que sua própria gravidade o molde em uma forma aproximadamente esférica (equilíbrio hidrostático).</li>
+                <li>Não "limpou a vizinhança" de sua órbita de outros objetos.</li>
+                <li>Não é um satélite.</li>
+            </ol>
+            <p>Atualmente, cinco corpos são oficialmente reconhecidos como planetas anões, mas muitos outros candidatos existem no Cinturão de Kuiper e além.</p>
+
+            <article id="plutao">
+                <h3> Plutão</h3>
+                <img src="imagens/plutao.jpg" alt="Planeta anão Plutão com sua lua Caronte" class="planet-image">
+                <p>Plutão foi considerado o nono planeta do Sistema Solar desde sua descoberta em 1930 até sua reclassificação em 2006. Localiza-se no Cinturão de Kuiper. É um mundo complexo e gelado, com montanhas de gelo, planícies de nitrogênio congelado e uma atmosfera tênue que aparece quando está mais próximo do Sol.</p>
+                <p><strong>Diâmetro:</strong> 2.376 km</p>
+                <p><strong>Luas Principais:</strong> 5 (Caronte, Nix, Hidra, Cérbero, Estige). Caronte é tão grande em relação a Plutão que o sistema é às vezes considerado um planeta anão duplo.</p>
+            </article>
+
+            <article id="ceres">
+                <h3> Ceres</h3>
+                <img src="imagens/ceres.jpg" alt="Planeta anão Ceres no Cinturão de Asteroides" class="planet-image">
+                <p>Ceres é o maior objeto no Cinturão de Asteroides, entre Marte e Júpiter, e foi o primeiro asteroide a ser descoberto, em 1801. É o único planeta anão localizado no Sistema Solar interno. A missão Dawn da NASA revelou uma superfície com crateras e misteriosos pontos brilhantes, que se acredita serem depósitos de sal.</p>
+                <p><strong>Diâmetro:</strong> Cerca de 940 km</p>
+                <p><strong>Composição:</strong> Acredita-se que possua um núcleo rochoso e um manto de gelo, com potencial para um oceano de água líquida subsuperficial.</p>
+            </article>
+
+            <article id="eris">
+                <h3> Eris</h3>
+                <img src="imagens/eris.jpg" alt="Planeta anão Eris e sua lua Disnomia" class="planet-image">
+                <p>Eris é um planeta anão localizado na região do disco disperso, além do Cinturão de Kuiper. Sua descoberta em 2005 foi um dos fatores que levaram à redefinição do termo "planeta" e à criação da categoria de planeta anão. Eris é ligeiramente menor que Plutão em volume, mas é cerca de 27% mais massivo.</p>
+                <p><strong>Diâmetro:</strong> Cerca de 2.326 km</p>
+                <p><strong>Lua:</strong> 1 (Disnomia)</p>   
+            </article>
+            
+            <article id="haumea">
+                <h3> Haumea</h3>
+                <img src="imagens/haumea.jpg" alt="Representação artística do planeta anão Haumea com seu anel" class="planet-image">
+                <p>Haumea é um planeta anão localizado no Cinturão de Kuiper. Destaca-se por sua forma extremamente alongada (elipsoidal), resultado de sua rotação muito rápida (um dia em Haumea dura apenas cerca de 4 horas). Também é notável por possuir um sistema de anéis e duas luas.</p>
+                <p><strong>Dimensões Aproximadas:</strong> Cerca de 2.322 km × 1.704 km × 1.138 km</p>
+                <p><strong>Luas:</strong> 2 (Hiʻiaka e Namaka)</p>
+                <p><strong>Anéis:</strong> Possui um anel, descoberto em 2017.</p>       
+            </article>
+
+            <article id="makemake">
+                <h3> Makemake</h3>
+                <img src="imagens/makemake.jpg" alt="Planeta anão Makemake" class="planet-image">
+                <p>Makemake é outro planeta anão do Cinturão de Kuiper, o segundo objeto mais brilhante da região depois de Plutão. Sua superfície parece ser coberta por gelos de metano, etano e nitrogênio, conferindo-lhe uma cor avermelhada. Possui uma pequena lua.</p>
+                <p><strong>Diâmetro:</strong> Cerca de 1.430 km</p>
+                <p><strong>Lua:</strong> 1 (MK2)</p>             
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pedro/Horizonte Cósmico. Criado para fins educacionais.</p>
+        <p>Explore cada página para aprender mais sobre o nosso fascinante Sistema Solar!</p>
+    </footer>
+</body>
+</html>

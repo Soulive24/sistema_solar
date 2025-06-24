@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Explorando o Sistema Solar</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>🌌 Nosso Incrível Sistema Solar 🪐</h1>
+    </header>
+
+    <nav>
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">Horizonte Cósmico</a>
+        
+        <!-- O checkbox que controla o menu (fica invisível) -->
+        <input type="checkbox" id="nav-toggle-input" class="nav-toggle-input">
+        
+        <!-- A label que funciona como o botão hambúrguer -->
+        <label for="nav-toggle-input" class="nav-toggle">
+            <span class="hamburger"></span>
+        </label>
+        
+        <!-- A lista de links que será mostrada/escondida -->
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="sol.html">Sol</a></li>
+                <li><a href="mercurio.html">Mercúrio</a></li>
+                <li><a href="venus.html">Vênus</a></li>
+                <li><a href="terra.html">Terra</a></li>
+                <li><a href="marte.html">Marte</a></li>
+                <li><a href="cinturao_asteroides.html">Cinturão de Asteroides</a></li>
+                <li><a href="jupiter.html">Júpiter</a></li>
+                <li><a href="saturno.html">Saturno</a></li>
+                <li><a href="urano.html">Urano</a></li>
+                <li><a href="netuno.html">Netuno</a></li>
+                <li><a href="planetas_anoes.html">Planetas Anões</a></li>
+                <li><a href="outros_corpos_celestes.html">Outros Corpos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main>
+        <section id="formulario-contato">
+            <h2>📝 Fale Conosco</h2>
+            <p>Tem alguma dúvida, sugestão ou encontrou algum erro? Adoraríamos ouvir de você! Preencha o formulário abaixo.</p>
+
+            <form action="#" method="POST" class="form-contato">
+                <div>
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome_usuario" placeholder="Seu nome completo" required>
+                </div>
+                <div>
+                    <label for="email">Seu Email:</label>
+                    <input type="email" id="email" name="email_usuario" placeholder="seuemail@exemplo.com" required>
+                </div>
+                <div>
+                    <label for="assunto">Assunto:</label>
+                    <input type="text" id="assunto" name="assunto_mensagem" placeholder="Sobre o que você quer falar?">
+                </div>
+                <div>
+                    <label for="mensagem">Sua Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem_usuario" rows="6" placeholder="Digite sua mensagem aqui..." required></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="Enviar Mensagem">
+                </div>
+            </form>
+            <p class="aviso-form"><strong>Aviso Importante:</strong> Este formulário é apenas uma demonstração visual.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pedro/Horizonte Cósmico. Criado para fins educacionais.</p>
+        <p>Explore cada página para aprender mais sobre o nosso fascinante Sistema Solar!</p>
+    </footer>
+</body>
+</html>
