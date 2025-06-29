@@ -1,7 +1,25 @@
 /* =================================================== */
 /* HORIZONTE CÓSMICO - FOLHA DE ESTILO PRINCIPAL    */
-/* VERSÃO COM MENU MOBILE           */
+/* VERSÃO COM ANIMAÇÕES E MENU RESPONSIVO          */
 /* =================================================== */
+
+/* --- Definições das Animações (@keyframes) --- */
+@keyframes deslizar-e-aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Começa 20px abaixo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Termina na posição original */
+  }
+}
+
+@keyframes aparecer-simples {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 
 /* --- Configurações Gerais e Fontes --- */
 body {
@@ -31,10 +49,12 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem; /* Ajustado para melhor visualização */
+    font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 1px;
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+    /* ANIMAÇÃO APLICADA AQUI */
+    animation: deslizar-e-aparecer 1.5s ease-out;
 }
 
 /* --- Barra de Navegação (Nav) --- */
@@ -81,27 +101,27 @@ nav ul li a {
     padding: 10px 15px;
     border-radius: 5px;
     font-weight: 500;
-    opacity: 0.8; /* Opacidade padrão */
-    transition: all 0.3s ease; /* Transição para TODAS as propriedades */
+    opacity: 0.8;
+    transition: all 0.3s ease;
 }
 
 nav ul li a:hover, nav ul li a:focus {
     background-color: #ff8c00;
     color: #0a0a23;
-    opacity: 1; /* Opacidade total no hover/focus */
-    transform: translateY(-2px); /* Efeito de elevação sutil */
+    opacity: 1;
+    transform: translateY(-2px);
 }
 
-/* --- Estilos do Menu Mobile (SEM JS) --- */
+/* --- Estilos do Menu Mobile --- */
 .nav-toggle-input {
-    display: none; /* Esconde o checkbox real */
+    display: none;
 }
 
 .nav-toggle {
-    display: none; /* Esconde a label (botão) em telas grandes */
+    display: none;
     cursor: pointer;
     padding: 10px;
-    z-index: 1001; /* Garante que fique acima dos links */
+    z-index: 1001;
 }
 
 .hamburger {
@@ -125,13 +145,8 @@ nav ul li a:hover, nav ul li a:focus {
     transition: all 0.3s ease;
 }
 
-.hamburger::before {
-    top: -8px;
-}
-
-.hamburger::after {
-    bottom: -8px;
-}
+.hamburger::before { top: -8px; }
+.hamburger::after { bottom: -8px; }
 
 
 /* --- Conteúdo Principal (Main) --- */
@@ -144,132 +159,18 @@ main {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
 }
 
-section {
-    margin-bottom: 50px;
-    padding: 25px;
-    border-bottom: 1px dashed #44475a;
-}
+/* ... (O resto do seu código permanece o mesmo) ... */
+section { margin-bottom: 50px; padding: 25px; border-bottom: 1px dashed #44475a; }
 section:last-child { border-bottom: none; }
-
-section h2 {
-    color: #ffaf40;
-    font-size: 2.2rem;
-    margin-top: 0;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #555a75;
-    padding-bottom: 12px;
-    font-weight: 600;
-}
-
-article {
-    background-color: rgba(42, 42, 74, 0.9);
-    padding: 20px;
-    margin-bottom: 25px;
-    border-radius: 8px;
-    border-left: 6px solid #ff8c00;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    overflow: hidden;
-}
-
-article h3 {
-    color: #ffd700;
-    font-size: 1.8rem;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-.planet-image {
-    max-width: 180px;
-    height: auto;
-    float: right;
-    margin: 5px 0 10px 20px;
-    border-radius: 50%;
-    border: 3px solid #ff8c00;
-    background-color: #000;
-    box-shadow: 0 0 20px 5px rgba(173, 216, 230, 0.4);
-}
-
+section h2 { color: #ffaf40; font-size: 2.2rem; margin-top: 0; margin-bottom: 20px; border-bottom: 2px solid #555a75; padding-bottom: 12px; font-weight: 600; }
+article { background-color: rgba(42, 42, 74, 0.9); padding: 20px; margin-bottom: 25px; border-radius: 8px; border-left: 6px solid #ff8c00; box-shadow: 0 2px 5px rgba(0,0,0,0.2); overflow: hidden; }
+article h3 { color: #ffd700; font-size: 1.8rem; margin-top: 0; margin-bottom: 15px; }
+.planet-image { max-width: 180px; height: auto; float: right; margin: 5px 0 10px 20px; border-radius: 50%; border: 3px solid #ff8c00; background-color: #000; box-shadow: 0 0 20px 5px rgba(173, 216, 230, 0.4); }
 p { margin-bottom: 12px; text-align: justify; }
 p strong { color: #90ee90; font-weight: 600; }
 em { color: #aaa; font-style: italic; display: block; margin-top: 10px; }
-
-
-/* --- Rodapé (Footer) --- */
-footer {
-    text-align: center;
-    padding: 25px;
-    color: #b0b0b0;
-    margin-top: 40px;
-    border-top: 4px solid #ff8c00;
-    background: rgba(15, 15, 26, 0.85);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-}
+footer { text-align: center; padding: 25px; color: #b0b0b0; margin-top: 40px; border-top: 4px solid #ff8c00; background: rgba(15, 15, 26, 0.85); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); }
 footer p { margin: 8px 0; text-align: center; font-size: 0.9rem; }
-
-
-/* =================================================== */
-/* RESPONSIVIDADE E MENU MOBILE            */
-/* =================================================== */
-
-@media (max-width: 850px) {
-    .nav-toggle {
-        display: block; /* Mostra o botão hambúrguer (label) */
-    }
-
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #1a1a36;
-        flex-direction: column;
-        padding-bottom: 1rem;
-    }
-
-    .nav-links ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .nav-links ul li {
-        display: block;
-        margin: 10px 0;
-        text-align: center;
-    }
-    
-    /* A mágica acontece aqui: quando o checkbox está marcado, mostra o menu */
-    .nav-toggle-input:checked ~ .nav-links {
-        display: flex;
-    }
-
-    /* Animação do botão hambúrguer para um "X" quando o checkbox está marcado */
-    .nav-toggle-input:checked ~ .nav-toggle .hamburger {
-        background-color: transparent;
-    }
-    .nav-toggle-input:checked ~ .nav-toggle .hamburger::before {
-        transform: rotate(45deg);
-        top: 0;
-    }
-    .nav-toggle-input:checked ~ .nav-toggle .hamburger::after {
-        transform: rotate(-45deg);
-        bottom: 0;
-    }
-
-    header h1 { font-size: 2.2rem; }
-    .planet-image { float: none; display: block; margin: 15px auto 20px auto; max-width: 150px; }
-    main { padding: 15px; margin: 20px 10px; }
-    section h2 { font-size: 1.9rem; }
-    article h3 { font-size: 1.6rem; }
-}
-
-@media (max-width: 480px) {
-    header h1 { font-size: 1.8rem; }
-    section h2 { font-size: 1.6rem; }
-    article h3 { font-size: 1.4rem; }
-}
-
 .video-wrapper, .sketchfab-embed-wrapper, .video-link-wrapper, .form-contato { margin: 20px 0; }
 .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 8px; }
 .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
@@ -287,3 +188,49 @@ footer p { margin: 8px 0; text-align: center; font-size: 0.9rem; }
 .form-contato input[type="submit"]:hover { background-color: #ffaf40; transform: translateY(-2px); }
 .aviso-form { margin-top: 20px; padding: 10px; background-color: rgba(255, 255, 0, 0.1); border: 1px dashed #ffd700; border-radius: 5px; color: #f0f0f0; text-align: center; }
 .aviso-form strong { color: #ff8c00; }
+
+
+/* =================================================== */
+/* RESPONSIVIDADE E ANIMAÇÕES EM BREAKPOINTS          */
+/* =================================================== */
+
+@media (max-width: 850px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #1a1a36;
+        flex-direction: column;
+        padding-bottom: 1rem;
+    }
+
+    .nav-links ul { flex-direction: column; width: 100%; }
+    .nav-links ul li { display: block; margin: 10px 0; text-align: center; }
+    .nav-toggle-input:checked ~ .nav-links { display: flex; }
+    .nav-toggle-input:checked ~ .nav-toggle .hamburger { background-color: transparent; }
+    .nav-toggle-input:checked ~ .nav-toggle .hamburger::before { transform: rotate(45deg); top: 0; }
+    .nav-toggle-input:checked ~ .nav-toggle .hamburger::after { transform: rotate(-45deg); bottom: 0; }
+
+    header h1 {
+        font-size: 2.2rem;
+        /* MUDANÇA DE ANIMAÇÃO NO BREAKPOINT */
+        animation: aparecer-simples 1.5s ease-out;
+    }
+    
+    .planet-image { float: none; display: block; margin: 15px auto 20px auto; max-width: 150px; }
+    main { padding: 15px; margin: 20px 10px; }
+    section h2 { font-size: 1.9rem; }
+    article h3 { font-size: 1.6rem; }
+}
+
+@media (max-width: 480px) {
+    header h1 { font-size: 1.8rem; }
+    section h2 { font-size: 1.6rem; }
+    article h3 { font-size: 1.4rem; }
+}
